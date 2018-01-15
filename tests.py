@@ -1,5 +1,5 @@
-import unittest
 from format_price import format_price_in_local
+import unittest
 
 
 class FormatPriceTestCase(unittest.TestCase):
@@ -9,25 +9,25 @@ class FormatPriceTestCase(unittest.TestCase):
             format_price_in_local(1234567890),
             '1 234 567 890'
         )
-        
+
     def test_integer_with_zero_decimals(self):
         self.assertEqual(
             format_price_in_local(00009.000),
             '9'
         )
-        
+
     def test_float(self):
         self.assertEqual(
             format_price_in_local(1234567890.128),
             '1 234 567 890.13'
         )
-   
+
     def test_float_with_dot_in_string(self):
         self.assertEqual(
             format_price_in_local('1234567890.199'),
             '1 234 567 890.20'
         )
-   
+
     def test_float_with_comma_in_qoutes(self):
         self.assertEqual(
             format_price_in_local('1234567890,5678'),
@@ -50,9 +50,9 @@ class FormatPriceTestCase(unittest.TestCase):
         self.colon_delimeter = '123456789:126'
         self.letter_delimeter = '123456689z3667'
         self.any_delimeter = '123456689-3667'
-        self.list = [1234,5678]
-        self.tuple = (12345,67890)
-        self.dict = {12:34, 56:78}
+        self.list = [1234, 5678]
+        self.tuple = (12345, 67890)
+        self.dict = {12: 34, 56: 78}
         self.none = None
         self.negative = -1234.567
 
