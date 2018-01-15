@@ -12,13 +12,13 @@ def format_price_in_local(price):
         price = re.search(
             r'\d*[.,]?\d{0,3}',
             str(price)
-        ).group(0).replace(',','.')
+        ).group(0).replace(',', '.')
         price = float(price)
         if price.is_integer():
-            price_comma_delimeted = '{:,.0f}'.format(price) #no decimal
+            price_comma_delimeted = '{:,.0f}'.format(price)  # no decimal
         else:
-            price_comma_delimeted = '{:,.2f}'.format(price) #2 decimals
-        return price_comma_delimeted.replace(',',' ')
+            price_comma_delimeted = '{:,.2f}'.format(price)  # 2 decimals
+        return price_comma_delimeted.replace(',', ' ')
     else:
         raise ValueError('Wrong price format')
 
