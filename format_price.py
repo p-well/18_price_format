@@ -20,7 +20,7 @@ def format_price_in_local(price):
             price_comma_delimeted = '{:,.2f}'.format(price)  # 2 decimals
         return price_comma_delimeted.replace(',', ' ')
     else:
-        raise ValueError('Wrong price format')
+        raise ValueError('Wrong format')
 
 
 if __name__ == '__main__':
