@@ -23,7 +23,7 @@ No 3rd party dependencies installation needed.
 
 # Usage
 
-To execute the script in CLI run the command ```python format_price.py <price>```.
+To execute the script in CLI run the command ```python format_price.py <price>```.<br />
 To use price formatter in other code import it like ```from format_price import format```.
 
 
