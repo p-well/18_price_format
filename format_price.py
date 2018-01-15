@@ -12,10 +12,8 @@ def format_price(price):
         price = re.search(r'\d*[.,]?\d{3}', price).group(0).replace(',','.')
         price = float(price)
         if price.is_integer():
-            print('price is integer')
             price_comma_delimeted = '{:,.0f}'.format(price)  # no decimal
         else:
-            print('price is not integer')
             price_comma_delimeted = '{:,.2f}'.format(price)  # 2 decimals
         price_whitespace_delimeted = price_comma_delimeted.replace(',',' ')
     else:
