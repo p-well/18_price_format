@@ -15,7 +15,7 @@ def format_price(price):
             price_comma_delimeted = '{:,.0f}'.format(price)  # no decimal
         else:
             price_comma_delimeted = '{:,.2f}'.format(price)  # 2 decimals
-        price_whitespace_delimeted = price_comma_delimeted.replace(',',' ')
+        return price_comma_delimeted.replace(',',' ')
     else:
         raise ValueError('Wrong price format')
 
